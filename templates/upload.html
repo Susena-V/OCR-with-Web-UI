@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form action="/u" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Upload">
+    </form>
+    <pre style:"font-family:Callisto MT">{{ message }}</pre>
+
+    <h1>Click the button to run the Python script</h1>
+    <form action="/r" method="post">
+        <button type="submit">Run Python Script</button>
+    </form>
+
+    <h1>Extracted Text</h1>
+    <pre>{{ output }}</pre>
+
+    <h1>Summarize</h1>
+    <form action="/sum" method="post">
+        <button type="submit">Summarize</button>
+    </form>
+
+    <h1>Summarized</h1>
+    <pre>{{ summary }}</pre>
+
+    
+</body>
+</html>
